@@ -22,7 +22,7 @@
 (def get-dependencies #'leiningen.core.classpath/get-dependencies)
 
 (defn deps-for [project]
-  (keys (get-dependencies :dependencies project)))
+  (keys (get-dependencies :dependencies nil project)))
 
 (defn jars-for [deps] (map (comp :file meta) deps))
 
